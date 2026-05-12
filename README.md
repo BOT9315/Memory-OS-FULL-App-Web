@@ -1,6 +1,6 @@
 # Memory OS
 
-> A life intelligence system that finds patterns in your journal, maps your relationships, tracks your emotional arc, and proactively surfaces insights — powered by Claude AI.
+> A life intelligence system that finds patterns in your journal, maps your relationships, tracks your emotional arc, and proactively surfaces insights — 
 
 ---
 
