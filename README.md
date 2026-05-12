@@ -74,30 +74,7 @@ DB_PATH=memory_os.db
 
 No quotes. No spaces around `=`.
 
-### 5. Fix the known bug in `main.py`
-
-Open `main.py` and apply these two fixes:
-
-**Fix 1 — line ~133:**
-```python
-# Change this:
-context_parts.append(f"- {g['goal']} (set: {g['created'][:10]})")
-
-# To this:
-context_parts.append(f"- {g['goal']} (set: {g.get('created_at','')[:10]})")
-```
-
-**Fix 2 — line ~138:**
-```python
-# Change this:
-context_parts.append(f"- {r['name']}: {r['sentiment']} sentiment, last mentioned {r['last_mentioned'][:10]}")
-
-# To this:
-last = (r['last_mentioned'] or '')[:10]
-context_parts.append(f"- {r['name']}: {r['sentiment']} sentiment, last mentioned {last}")
-```
-
-### 6. Start the server
+### 5. Start the server
 
 ```bash
 uvicorn main:app --reload --port 8000
@@ -111,7 +88,7 @@ Memory OS Full Stack — ready
 INFO: Uvicorn running on http://127.0.0.1:8000
 ```
 
-### 7. Open the app
+### 6. Open the app
 
 Open `frontend/index.html` directly in your browser. No extra server needed.
 
