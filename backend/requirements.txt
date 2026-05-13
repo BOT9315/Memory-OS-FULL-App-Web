@@ -1,0 +1,11 @@
+fastapi==0.111.0
+uvicorn==0.29.0
+anthropic==0.28.0
+pydantic==2.7.1
+python-dotenv==1.0.1
+
+# Phase 2 — vector search
+chromadb==0.5.0
+
+# Phase 4 — voice (optional)
+# openai==1.30.0   # for Whisper transcription
